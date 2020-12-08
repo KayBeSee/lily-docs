@@ -1,0 +1,30 @@
+{
+  "name": "LilyDocs",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "@next/bundle-analyzer": "^10.0.3",
+    "@next/mdx": "^10.0.3",
+    "@styled-icons/octicons": "^10.20.0",
+    "@styled-icons/simple-icons": "^10.22.0",
+    "file-loader": "^6.2.0",
+    "next": "latest",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-transition-group": "^4.4.1",
+    "simple-functional-loader": "^1.2.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.0.2",
+    "postcss": "8.1.7",
+    "tailwindcss": "^2.0.1"
+  },
+  "license": "MIT"
+}

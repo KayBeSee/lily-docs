@@ -1,0 +1,65 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+html,
+body {
+  font-family: 'Montserrat';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* font-family: 'Montserrat'; */
+  font-family: 'Raleway';
+}
+
+h1 {
+  @apply text-3xl leading-9 mb-4 font-extrabold text-gray-900 tracking-tight sm:text-4xl sm:leading-10 md:text-5xl;
+}
+
+h2 {
+  @apply text-2xl mt-8 mb-4 leading-9 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9 md:text-4xl;
+}
+
+h3 {
+  @apply text-xl mt-8 mb-4 leading-8 font-extrabold text-gray-900 tracking-tight sm:text-2xl sm:leading-8 md:text-3xl;
+}
+
+h4 {
+  @apply text-lg mt-8 mb-4 leading-7 font-extrabold text-gray-900 tracking-tight sm:text-xl sm:leading-7 md:text-2xl;
+}
+
+p {
+  @apply mt-2 text-base leading-6 text-gray-700 mb-4
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+ul {
+  @apply list-disc list-inside text-gray-700
+}
+
+p > a, li > a {
+  @apply text-green-700 underline
+}
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+html,
+body {
+  @apply bg-gray-50 dark:bg-gray-900;
+}
+
+/* Write your own custom component styles here */
+.btn-blue {
+  @apply px-4 py-2 font-bold text-white bg-blue-500 rounded;
+}
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */

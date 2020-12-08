@@ -1,0 +1,50 @@
+import styled from 'styled-components';
+import { Apple, Windows, Linux } from '@styled-icons/simple-icons';
+import Card from '../../components/Card'
+
+export const meta = {
+  order: 1,
+  title: "Installation"
+}
+
+# Installation Page
+
+Lily is an open source multisignature bitcoin wallet used for securely high value amounts of Bitcoin. Lily enables you to create addresses that require multiple keys to approve transactions to send funds. With Lily, you can store your wealth with professional grade security and a simple user interface. By taking advantage of Lily's multisignature vaults, you can secure your wealth for yourself and your loved ones for generations.
+
+You can download and install Lily on multiple platforms. Click on the operating system you are using to download the installation file.
+
+<div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+  <Card
+    image={<AppleIcon />}
+    title="Mac"
+    link="#"
+    content="lily-wallet-0.0.1.dmg"
+  />
+
+  <Card
+    image={<WindowsIcon />}
+    title="Windows"
+    link="#"
+    content="lily-wallet-0.0.1.exe"
+  />
+
+  <Card
+    image={<LinuxIcon />}
+    title="Linux"
+    link="#"
+    content="lily-wallet-0.0.1.AppImage"
+  />
+
+</div>
+
+export const AppleIcon = styled(Apple)`
+  width: 2em;
+`;
+
+export const WindowsIcon = styled(Windows)`
+  width: 2em;
+`;
+
+export const LinuxIcon = styled(Linux)`
+  width: 2em;
+`;

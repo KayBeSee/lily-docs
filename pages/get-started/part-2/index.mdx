@@ -1,0 +1,71 @@
+import InfoAlert from '@/components/InfoAlert';
+import SelectWalletTypeImage from './select-account-type.png'
+import InputAccountName from './input-account-name.png'
+import AddNewAccountImage from './add-a-new-account.png'
+import SelectHardwareWallet from './select-hardware-wallet.png';
+import Success from './success.png';
+import AccountOverview from './account-overview.png';
+
+export const meta = {
+  order: 3.2,
+  title: "Part 2 - Setup Hardware Wallet"
+}
+
+# Part 2: Setup Hardware Wallet
+
+Most folks who are setting up Lily for the first time already have used a hardware wallet in the past with software like Ledger Live, Trezor Wallet, or Electrum.
+
+We will begin this tutorial by going through connecting a single hardware wallet to Lily.
+
+<InfoAlert
+  text="This next part will go through setting up a single sig hardware wallet"
+  actionLink="./part-3"
+  actionText="Skip to Multisig" />
+
+#### 1) Click "Add a new account"
+Clicking "Add new Account" on the home page or "New Account" in the app's sidebar will bring you to the New Account page.
+<img 
+  alt="Select add a new account in Lily Wallet"
+  src={AddNewAccountImage} />
+
+
+#### 2) Click "Hardware Wallet"
+On the new account page, click on the "Hardware Wallet" option.
+
+<img 
+  alt="Select account type in Lily Wallet"
+  src={SelectWalletTypeImage} />
+
+
+#### 3) Give the account a name and click continue
+Give your account a name to identify it when you are managing multiple accounts. For single hardware devices, users typically use the name of the device. Users can change the account name later on the account's settings page.
+<img 
+  alt="Input account name in Lily Wallet"
+  src={InputAccountName} />
+
+#### 4) Click on your device
+Select the device you want to manage with Lily.
+
+<InfoAlert 
+  text="Some devices like Coldcard support airgapping, allowing you to add a device without plugging it into your computer." 
+  actionLink="./devices/coldcard/airgap"
+  actionText="Read Coldcard Airgap Instructions"  
+/>
+<img 
+  alt="Select your hardware wallet from the screen"
+  src={SelectHardwareWallet} />
+
+#### 5) Success!
+You have successfully added your hardware wallet to Lily. If you have used the device to manage funds in the past, your transaction history and current balance should populate.
+<img 
+  alt="Successfully added a hardware wallet"
+  src={Success} />
+
+#### 6) Verify Balance
+Once you have successfully added your hardware wallet to Lily, go to the account page and verify that your balances and past transactions appear.
+
+<img 
+  alt="Hardware wallet account overview page"
+  src={AccountOverview} />
+
+  
