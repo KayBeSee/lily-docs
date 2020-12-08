@@ -3,7 +3,7 @@ import { MDXProvider } from '@mdx-js/react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-import Nav from '@/components/Nav'
+import Nav from '@/components/nav'
 import Topbar from '@/components/Topbar'
 
 const components = {
