@@ -4,12 +4,17 @@
 
 html,
 body {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   /* font-family: 'Montserrat'; */
-  font-family: 'Raleway';
+  font-family: "Raleway";
 }
 
 h1 {
@@ -29,7 +34,7 @@ h4 {
 }
 
 p {
-  @apply mt-2 text-base leading-6 text-gray-700 mb-4
+  @apply mt-2 text-base leading-6 text-gray-700 mb-4;
 }
 
 a:hover {
@@ -37,11 +42,12 @@ a:hover {
 }
 
 ul {
-  @apply list-disc list-inside text-gray-700
+  @apply list-disc list-inside text-gray-700;
 }
 
-p > a, li > a {
-  @apply text-green-700 underline
+p > a,
+li > a {
+  @apply text-green-700 underline;
 }
 
 /* Start purging... */
@@ -63,3 +69,9 @@ body {
 /* Stop purging. */
 
 /* Your own custom utilities */
+
+/* Algolia */
+
+.algolia-autocomplete {
+  width: 100%;
+}
