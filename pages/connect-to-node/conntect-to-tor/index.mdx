@@ -1,0 +1,30 @@
+import screen1 from "./tor-setup-screen.png";
+
+export const meta = {
+  order: 13,
+  title: "Connect to Tor",
+};
+
+# Connect to Tor
+
+Unfortunately tor doesn't work out of the box with Lily, so there are a few steps that must be run.
+
+## on Mac
+
+We will need to install Homebrew (https://brew.sh/) to make it easy to run Tor.
+
+### Paste the following into a Terminal window:
+
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+### Once that completes, run:
+
+`brew install tor`
+
+### Then run:
+
+`tor`
+
+The output should look like:
+
+<img alt="Setup Tor with Lily Wallet" src={screen1} />
