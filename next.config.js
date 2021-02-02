@@ -1,38 +1,44 @@
-const { createLoader } = require('simple-functional-loader')
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
+const { createLoader } = require("simple-functional-loader");
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
 // const withMDX = require('@next/mdx')({
 //   extension: /\.mdx?$/,
 // })
 
 module.exports = withBundleAnalyzer({
-  pageExtensions: ['js', 'jsx', 'mdx'],
+  pageExtensions: ["js", "jsx", "mdx"],
   experimental: {
     modern: true,
   },
+  redirects: [
+    {
+      source: "get-started",
+      destination: "get-started/part-1",
+      permanent: true,
+    },
+  ],
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.(png|jpe?g|gif|mp4)$/i,
       use: [
         {
-          loader: 'file-loader',
+          loader: "file-loader",
           options: {
-            publicPath: '/_next',
-            name: 'static/media/[name].[hash].[ext]',
+            publicPath: "/_next",
+            name: "static/media/[name].[hash].[ext]",
           },
         },
       ],
-    })
+    });
 
     const mdx = [
       options.defaultLoaders.babel,
       {
-        loader: '@mdx-js/loader'
+        loader: "@mdx-js/loader",
       },
-    ]
-
+    ];
 
     config.module.rules.push({
       test: /\.mdx$/,
@@ -43,16 +49,14 @@ module.exports = withBundleAnalyzer({
             'import DocumentationPage from "@/components/DocumentationPage"',
             'export { getStaticProps } from "@/getStaticProps"',
             src,
-            'export default (props) => <DocumentationPage meta={meta} {...props} />',
-          ].join('\n')
+            "export default (props) => <DocumentationPage meta={meta} {...props} />",
+          ].join("\n");
 
-          return this.callback(null, content)
+          return this.callback(null, content);
         }),
       ],
     });
 
-
-    return config
+    return config;
   },
-
 });

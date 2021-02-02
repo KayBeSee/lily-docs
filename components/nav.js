@@ -1,15 +1,15 @@
-import { Fragment } from 'react';
-import styled from 'styled-components';
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { TriangleDown } from '@styled-icons/octicons';
+import { Fragment } from "react";
+import styled from "styled-components";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { TriangleDown } from "@styled-icons/octicons";
 
-import NavGroup from './NavGroup'
-import NavItem from './NavItem'
-import { Transition } from './Transition'
+import NavGroup from "./NavGroup";
+import NavItem from "./NavItem";
+import { Transition } from "./Transition";
 import { pages } from "../getAllPages";
 
-import { isChild, isParent } from '../utils/navigation';
+import { isChild, isParent } from "../utils/navigation";
 
 // const NavItem = ({ page, router, isParent }) => (
 //   <Link href={page.link}>
@@ -25,73 +25,89 @@ const getChildren = (pages) => {
   for (let i = 0; i < pages.length; i++) {
     const current = pages[i];
     if (!isChild(pages[i])) {
-      return items
+      return items;
     } else {
-      items.push(current)
+      items.push(current);
     }
   }
   return items;
-}
+};
 
 const constructNav = (pages, router) => {
   let index = 0;
   const items = [];
-  pages.sort((a, b) => a.module.meta.order - b.module.meta.order)
+  pages.sort((a, b) => a.module.meta.order - b.module.meta.order);
   while (index < pages.length) {
     if (isParent(pages, index)) {
       const children = getChildren(pages.slice(index + 1, pages.length));
       items.push(
         <NavGroup page={pages[index]} pageChildren={children} router={router} />
-      )
+      );
       index = index + children.length + 1;
     } else {
-      items.push(<NavItem page={pages[index]} router={router} isParent={false} />)
+      items.push(
+        <NavItem page={pages[index]} router={router} isParent={false} />
+      );
       index = index + 1;
     }
   }
   return items;
-}
+};
 
-export default function Nav({ isOpen, setIsOpen }) {
+export default function Nav({ sidebarOpen, setSidebarOpen }) {
   const router = useRouter();
-
 
   const nav = constructNav(pages, router);
 
-
   return (
     <Fragment>
-      <div className="md:hidden">
-        <div className="fixed inset-0 flex z-40">
-          <Transition
-            show={isOpen}
-            enter="transition-opacity ease-linear duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition-opacity ease-linear duration-300"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <div className="fixed inset-0">
-              <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
-            </div>
-          </Transition>
-          <Transition
-            show={isOpen}
-            enter="transition ease-in-out duration-300 transform"
-            enterFrom="-translate-x-full"
-            enterTo="translate-x-0"
-            leave="transition ease-in-out duration-300 transform"
-            leaveFrom="translate-x-0"
-            leaveTo="-translate-x-full">
+      <Transition
+        show={sidebarOpen}
+        enter="transition-opacity ease-linear duration-300"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity ease-linear duration-300"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
+        <div className="fixed inset-0">
+          <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
+        </div>
+      </Transition>
+      <Transition
+        show={sidebarOpen}
+        enter="transition ease-in-out duration-300 transform"
+        enterFrom="-translate-x-full"
+        enterTo="translate-x-0"
+        leave="transition ease-in-out duration-300 transform"
+        leaveFrom="translate-x-0"
+        leaveTo="-translate-x-full"
+      >
+        <div className="md:hidden">
+          <div className="fixed inset-0 flex z-40">
             <Fragment>
               <div className="relative flex-1 flex flex-col max-w-xs w-full bg-white">
                 <div className="absolute top-0 right-0 -mr-12 pt-2">
-                  <button onClick={() => setIsOpen(false)} className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <button
+                    onClick={() => setSidebarOpen(false)}
+                    className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  >
                     <span className="sr-only">Close sidebar</span>
                     {/*}Heroicon name: x */}
-                    <svg className="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                    <svg
+                      className="h-6 w-6 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
                     </svg>
                   </button>
                 </div>
@@ -99,13 +115,18 @@ export default function Nav({ isOpen, setIsOpen }) {
                   <nav className="mt-5 px-2 space-y-1">
                     {pages.map((page, index) => (
                       <Link href={page.link}>
-                        <a className={`group flex items-center justify-between px-2 py-2 text-base font-medium text-gray-900 ${isChild(page) && router.pathname !== page.link && 'ml-2 border-l border-green-700'} ${router.pathname === page.link && 'bg-gray-100'}`}>
+                        <a
+                          className={`group flex items-center justify-between px-2 py-2 text-base font-medium text-gray-900 ${
+                            isChild(page) &&
+                            router.pathname !== page.link &&
+                            "ml-2 border-l border-green-700"
+                          } ${router.pathname === page.link && "bg-gray-100"}`}
+                        >
                           {page.module.meta.title}
                           {isParent(pages, index) && <Arrow />}
                         </a>
                       </Link>
-                    )
-                    )}
+                    ))}
                   </nav>
                 </div>
               </div>
@@ -113,27 +134,25 @@ export default function Nav({ isOpen, setIsOpen }) {
                 {/* Force sidebar to shrink to fit close icon */}
               </div>
             </Fragment>
-          </Transition>
+          </div>
         </div>
-      </div>
+      </Transition>
 
       {/*}Static sidebar for desktop */}
-      <div className="hidden md:flex md:flex-shrink-0" >
+      <div className="hidden md:flex md:flex-shrink-0">
         <div className="flex flex-col w-64">
           {/*}Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex flex-col h-0 flex-1 border-r border-gray-200 bg-white">
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
-              <nav className="flex-1 px-0 bg-white space-y-1">
-                {nav}
-              </nav>
+              <nav className="flex-1 px-0 bg-white space-y-1">{nav}</nav>
             </div>
           </div>
         </div>
       </div>
     </Fragment>
-  )
+  );
 }
 
 const Arrow = styled(TriangleDown)`
   width: 1em;
-`
+`;
