@@ -1,0 +1,46 @@
+import InfoAlert from "@/components/InfoAlert";
+import SendTxForm from "./send-tx-form.png";
+import BeforeDeviceApproval from "./before-device-approval.png";
+import ApprovedTx from "./approved-tx.png";
+import Success from "./success.png";
+
+export const meta = {
+  order: 4.3,
+  title: "Basic Transaction",
+};
+
+# Sending Bitcoin
+
+In order to send money with Lily, you will need your devices. For a single hardware wallet account, you will only need that particular hardware wallet to approve a transaction. For multisig vaults, you will need access to the required number of devices you specified when creating your vault.
+
+#### 1) Provide address and amount to send then click "Preview Transaction"
+
+Input the bitcoin address and amount you want to send in the transaction form. This will construct a new bitcoin transaction for approval.
+
+<img src={SendTxForm} alt="Lily Wallet Send Bitcoin Form" />
+
+#### 2) Review the transaction information
+
+After constructing the transaction, double check that the address and amount are correct. Optionally, you can adjust the fee and verify the inputs and outputs from the "..." menu.
+
+<img src={BeforeDeviceApproval} alt="Verify address and amount information" />
+
+#### 3) Click the device you want to approve transaction with.
+
+After reviewing the address and amount, connect your device to your computer in order to approve the transaction. If the device is already connected and unlocked, it should appear on the right-hand side. If not, you may scan for it again by clicking "Scan for Devices."
+
+Depending on if you are spending from a multisignature vault or regular hardware wallet account, you may require approvals from multiple devices.
+
+<InfoAlert
+  text="More secure setups will approve transactions using an offline device"
+  actionLink="./part-3"
+  actionText="Learn more about airgapped approvals"
+/>
+
+<img src={ApprovedTx} alt="Click device to approve transaction" />
+
+#### 4) Click "Broadcast Transaction"
+
+After the required number of devices have approved the transaction, the Broadcast Transaction button should become active and allow the transaction to be broadcast. This will publish it to the Bitcoin network where it will be confirmed. This operation is perminent and cannot be reversed.
+
+<img src={Success} alt="Broadcast transaction" />

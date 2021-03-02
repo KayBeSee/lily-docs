@@ -12,13 +12,15 @@ module.exports = withBundleAnalyzer({
   experimental: {
     modern: true,
   },
-  redirects: [
-    {
-      source: "get-started",
-      destination: "get-started/part-1",
-      permanent: true,
-    },
-  ],
+  async redirects() {
+    return [
+      {
+        source: "/get-started",
+        destination: "/get-started/part-1",
+        permanent: true,
+      },
+    ];
+  },
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.(png|jpe?g|gif|mp4)$/i,

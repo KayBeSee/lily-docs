@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -41,12 +41,22 @@ const constructNav = (pages, router) => {
     if (isParent(pages, index)) {
       const children = getChildren(pages.slice(index + 1, pages.length));
       items.push(
-        <NavGroup page={pages[index]} pageChildren={children} router={router} />
+        <NavGroup
+          key={index}
+          page={pages[index]}
+          pageChildren={children}
+          router={router}
+        />
       );
       index = index + children.length + 1;
     } else {
       items.push(
-        <NavItem page={pages[index]} router={router} isParent={false} />
+        <NavItem
+          key={index}
+          page={pages[index]}
+          router={router}
+          isParent={false}
+        />
       );
       index = index + 1;
     }
@@ -70,7 +80,7 @@ export default function Nav({ sidebarOpen, setSidebarOpen }) {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="fixed inset-0">
+        <div className="fixed inset-0 z-10">
           <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
         </div>
       </Transition>
@@ -112,22 +122,7 @@ export default function Nav({ sidebarOpen, setSidebarOpen }) {
                   </button>
                 </div>
                 <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
-                  <nav className="mt-5 px-2 space-y-1">
-                    {pages.map((page, index) => (
-                      <Link href={page.link}>
-                        <a
-                          className={`group flex items-center justify-between px-2 py-2 text-base font-medium text-gray-900 ${
-                            isChild(page) &&
-                            router.pathname !== page.link &&
-                            "ml-2 border-l border-green-700"
-                          } ${router.pathname === page.link && "bg-gray-100"}`}
-                        >
-                          {page.module.meta.title}
-                          {isParent(pages, index) && <Arrow />}
-                        </a>
-                      </Link>
-                    ))}
-                  </nav>
+                  <nav className="mt-5 px-2 space-y-1">{nav}</nav>
                 </div>
               </div>
               <div className="flex-shrink-0 w-14">

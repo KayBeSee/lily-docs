@@ -1,6 +1,34 @@
 export const meta = {
-  title: 'Devices',
-  order: 5
-}
+  title: "Devices",
+  order: 5,
+};
 
-# foo
+# Devices
+
+Lily uses Bitcoin Core's [Hardware Wallet Interface (HWI) library](https://github.com/bitcoin-core/HWI) to communicate with hardware wallets.
+
+We currently support the following devices:
+
+- Coldcard MK3
+- Cobo Vault
+- Trezor One
+- Trezor Model T
+- Ledger Nano X
+- Ledger Nano S
+
+### Recommended Devices
+
+We recommend using devices from different manufacturers in multisig setups in case there is a bug in one manufactuer's software implementation.
+
+#### For 2-of-3 setups, we recommend:
+
+- Coldcard MK3
+- Cobo Vault
+- Trezor One
+
+#### For 3-of-5 setups, we recommend:
+
+- (2) Coldcard MK3
+- Cobo Vault
+- Trezor One
+- Ledger Nano S

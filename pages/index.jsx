@@ -6,6 +6,7 @@ import {
   DesktopDownload,
   Gift,
   CodeReview,
+  Key,
 } from "@styled-icons/octicons";
 
 import Card from "../components/Card";
@@ -75,6 +76,15 @@ export default function IndexPage() {
 
         <Card
           image={
+            <KeyIcon className="bg-green-100 rounded-full text-green-900" />
+          }
+          link="/devices"
+          title="Devices"
+          content="See what devices are compatabile and recommended."
+        />
+
+        <Card
+          image={
             <GiftIcon className="bg-green-100 rounded-full text-green-900" />
           }
           link="/get-started"
@@ -120,6 +130,12 @@ const GiftIcon = styled(Gift)`
 `;
 
 const CodeReviewIcon = styled(CodeReview)`
+  width: 4em;
+  padding: 1em;
+  border-radius: 1.25em;
+`;
+
+const KeyIcon = styled(Key)`
   width: 4em;
   padding: 1em;
   border-radius: 1.25em;
