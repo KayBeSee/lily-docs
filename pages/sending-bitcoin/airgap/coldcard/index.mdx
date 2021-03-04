@@ -1,0 +1,66 @@
+import InfoAlert from "@/components/InfoAlert";
+
+import SaveTxToFile from "./save-tx-to-file.png";
+import SaveDialog from "./save-dialog.png";
+import AddSignatureFromFile from "./add-signature-from-file.png";
+import LoadDialog from "./load-dialog.png";
+import OkToSend from "./ok-to-send.png";
+import ReadyToSign from "./ready-to-sign.png";
+import Success from "./success.png";
+
+export const meta = {
+  order: 4.4,
+  title: "Airgap - Coldcard",
+};
+
+# Airgap - Coldcard
+
+The Coldcard MK3 has a MicroSD card slot which allows data to be transferred via PSBT files (.psbt) without having to plug it into your computer. Lily allows PSBT files to be imported and exported to use with Coldcard.
+
+While this process is more cumbersome, it does provide an extra layer of security by not directly exposing the device to your machine where malicious code could be running.
+
+#### 1) Create a transaction in Lily and click "Save transaction to file" in the transaction summary menu.
+
+<img src={SaveTxToFile} alt="" />
+
+#### 2) Save the .psbt file to your MicroSD Card
+
+<img src={SaveDialog} alt="" />
+
+#### 3) Remove the MicroSD from your computer, plug it into your Coldcard, and click "Ready to Sign"
+
+<InfoAlert
+  text="If you receive an error about an unrecognized multisig wallet, then you haven't imported the multisig wallet into your Coldcard"
+  actionLink="/devices/coldcard"
+  actionText="View Coldcard setup instructions"
+/>
+
+<img src={ReadyToSign} alt="" />
+
+#### 4) Verify transaction information on the device and approve
+
+To be safe, verify that the transaction information presented on the Coldcard device matches the information presented in Lily.
+
+<InfoAlert
+  text="We have more detailed instructions on how to verify transaction details with Lily."
+  actionLink="./verifying-transaction-details"
+  actionText="View verify transaction instructions"
+/>
+
+<img src={OkToSend} alt="" />
+
+#### 5) Remove MicroSD card from Coldcard, plug it back into computer, and click "Add signature from file" in Lily's Confirm on Devices menu
+
+<img src={AddSignatureFromFile} alt="" />
+
+#### 6) Select the signed transaction file
+
+Coldcard appends `-part.psbt` to the end of files it has signed.
+
+<img src={LoadDialog} alt="" />
+
+#### 7) Success
+
+Lily will load the signed file into itself and display the Coldcard as a signed device.
+
+<img src={Success} alt="" />

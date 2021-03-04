@@ -1,0 +1,58 @@
+import styled from "styled-components";
+import { Scan, Menu } from "@styled-icons/boxicons-regular";
+import InfoAlert from "@/components/InfoAlert";
+
+import CreateTransaction from "./create-transaction.png";
+import ScanWithDevice from "./scan-qr-code.png";
+import VerifyTxInfo from "./verify-tx-info.png";
+import ScanTxToLily from "./scan-tx-to-lily.png";
+
+export const meta = {
+  order: 4.4,
+  title: "Airgap - Cobo Vault",
+};
+
+# Airgap - Cobo Vault
+
+Cobo Vault utilizes its built-in camera and QR codes to transmit data between the computer and itself.
+
+While this process is more cumbersome, it does provide an extra layer of security by not directly exposing the device to your machine where malicious code could be running.
+
+#### 1) Create a transaction in Lily and click the Cobo Vault image in the Confirm on Devices pane.
+
+<img src={CreateTransaction} alt="Create transaction" />
+
+#### 2) Scan the QR code with your Cobo Vault
+
+After clicking on the Cobo Vault image in Lily, a QR code will appear to scan with your Cobo Vault.
+
+To open the camera on the Cobo Vault:
+
+1. Unlock the device
+2. Click the <MenuIcon /> icon
+3. Select "Multisig Wallet"
+4. Click the <ScanIcon /> icon
+
+Note: The Cobo Vault will only appear here if it is apart of the account. To setup a vault with Cobo Vault, view the [Cobo Vault setup instructions](/devices/cobo-vault).
+
+<img src={ScanWithDevice} alt="Scan with Cobo Vault" />
+
+#### 3) Verify transaction information on Cobo Vault and click "Sign"
+
+Make sure that the information displayed in Lily is the same that appears on your Cobo Vault and then click "Sign" to approve the transaction. Cobo will ask you to input your password again for extra security.
+
+<img src={VerifyTxInfo} alt="Verify transaction information" />
+
+#### 4) Scan QR with Lily
+
+Click the "Scan QR from Device to Lily" button in Lily Wallet and then scan the QR Code from the Cobo Vault to Lily. Once the transaction is scanned, the Cobo Vault will have a green box and checkmark around it.
+
+<img src={ScanTxToLily} alt="Scan tranaction to Lily" />
+
+export const ScanIcon = styled(Scan)`
+  width: 2em;
+`;
+
+export const MenuIcon = styled(Menu)`
+  width: 2em;
+`;

@@ -33,7 +33,7 @@ const getChildren = (pages) => {
   return items;
 };
 
-const constructNav = (pages, router) => {
+const constructNav = (pages, router, setSidebarOpen) => {
   let index = 0;
   const items = [];
   pages.sort((a, b) => a.module.meta.order - b.module.meta.order);
@@ -56,6 +56,7 @@ const constructNav = (pages, router) => {
           page={pages[index]}
           router={router}
           isParent={false}
+          setSidebarOpen={setSidebarOpen}
         />
       );
       index = index + 1;
@@ -67,7 +68,7 @@ const constructNav = (pages, router) => {
 export default function Nav({ sidebarOpen, setSidebarOpen }) {
   const router = useRouter();
 
-  const nav = constructNav(pages, router);
+  const nav = constructNav(pages, router, setSidebarOpen);
 
   return (
     <Fragment>

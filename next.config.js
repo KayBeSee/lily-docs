@@ -1,4 +1,6 @@
 const { createLoader } = require("simple-functional-loader");
+const remarkSlugs = require("remark-slug");
+const rehypeHtml = require("rehype-stringify");
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
@@ -39,6 +41,10 @@ module.exports = withBundleAnalyzer({
       options.defaultLoaders.babel,
       {
         loader: "@mdx-js/loader",
+        options: {
+          remarkPlugins: [remarkSlugs],
+          rehypePlugins: [rehypeHtml],
+        },
       },
     ];
 

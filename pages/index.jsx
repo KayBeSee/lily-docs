@@ -8,6 +8,7 @@ import {
   CodeReview,
   Key,
 } from "@styled-icons/octicons";
+import { Calculator } from "@styled-icons/boxicons-regular";
 
 import Card from "../components/Card";
 
@@ -76,7 +77,7 @@ export default function IndexPage() {
 
         <Card
           image={
-            <KeyIcon className="bg-green-100 rounded-full text-green-900" />
+            <DeviceIcon className="bg-green-100 rounded-full text-green-900" />
           }
           link="/devices"
           title="Devices"
@@ -135,7 +136,7 @@ const CodeReviewIcon = styled(CodeReview)`
   border-radius: 1.25em;
 `;
 
-const KeyIcon = styled(Key)`
+const DeviceIcon = styled(Calculator)`
   width: 4em;
   padding: 1em;
   border-radius: 1.25em;

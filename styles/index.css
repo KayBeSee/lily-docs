@@ -45,6 +45,11 @@ ul {
   @apply list-disc list-inside text-gray-700;
 }
 
+ol {
+  list-style: decimal;
+  margin-left: 3em;
+}
+
 p > a,
 li > a {
   @apply text-green-700 underline;
