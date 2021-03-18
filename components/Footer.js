@@ -19,7 +19,7 @@ const Footer = () => {
                 </h3>
                 <ul className="mt-4 space-y-4 list-none">
                   <li>
-                    <Link href="/">
+                    <Link href="https://lily.kevinmulcrone.com">
                       <a className="text-base text-white hover:text-green-200 no-underline">
                         Lily Wallet
                       </a>
@@ -27,7 +27,7 @@ const Footer = () => {
                   </li>
 
                   <li>
-                    <Link href="/btc-security-guide">
+                    <Link href="https://lily.kevinmulcrone.com/btc-security-guide">
                       <a className="text-base text-white hover:text-green-200 no-underline">
                         BTC Security Guide
                       </a>
