@@ -8,7 +8,6 @@ const Topbar = ({ sidebarOpen, setSidebarOpen }) => {
       <div className="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
         <button
           onClick={() => {
-            console.log("foo");
             setSidebarOpen(!sidebarOpen);
           }}
           className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
@@ -46,9 +45,6 @@ const Topbar = ({ sidebarOpen, setSidebarOpen }) => {
           </a>
         </Link>
       </div>
-      <Button className="text-gray500 border-2 border-green-700 ring-green-900">
-        Support
-      </Button>
     </div>
   );
 };

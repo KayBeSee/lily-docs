@@ -36,7 +36,7 @@ export default function IndexPage() {
         alt="Lily Logo"
       />
       <div className="w-3/4 md:w-1/2 mt-5 mb-4 flex justify-center mx-auto">
-        <h1 className="text-center">What can we help you find?</h1>
+        <h2 className="text-center">What can we help you find?</h2>
       </div>
 
       <div className="w-full sm:w-3/4 md:w-1/2 flex justify-center mx-auto mb-20">
@@ -80,7 +80,7 @@ export default function IndexPage() {
             <DeviceIcon className="bg-green-100 rounded-full text-green-900" />
           }
           link="/devices"
-          title="Devices"
+          title="Supported Devices"
           content="See what devices are compatabile and recommended."
         />
 
