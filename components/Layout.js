@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
             className="flex-1 relative z-0 overflow-y-auto focus:outline-none"
             tabIndex="0"
           >
-            <div className="py-12">
+            <div className="py-12" id="page-top">
               <div
                 className={`${
                   router.pathname === "/" ? "max-w-7xl" : "max-w-4xl"

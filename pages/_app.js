@@ -6,14 +6,9 @@ import { useEffect } from "react";
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     Router.onRouteChangeComplete = () => {
-      console.log("foobar");
+      document.getElementById("page-top").scrollIntoView(true);
       window.scroll(0, 0);
     };
-
-    Router.events.on("routeChangeComplete", () => {
-      console.log("foobar2: ", window);
-      window.scrollTo(0, 0);
-    });
   });
 
   return (
