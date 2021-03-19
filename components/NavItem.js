@@ -17,7 +17,7 @@ const NavItem = ({ page, router, isParent, setSidebarOpen }) => (
         "border-l border-green-700"
       } ${
         router.pathname === page.link
-          ? "text-gray-900 bg-gray-100 border-l-8 border-green-700"
+          ? "text-gray-900 bg-gray-100 border-l-4 border-green-700"
           : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
       }`}
     >

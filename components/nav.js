@@ -46,6 +46,7 @@ const constructNav = (pages, router, setSidebarOpen) => {
           page={pages[index]}
           pageChildren={children}
           router={router}
+          active={pages[index].link === `/${router.pathname.split("/")[1]}`}
         />
       );
       index = index + children.length + 1;
