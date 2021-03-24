@@ -1,4 +1,22 @@
+import styled from "styled-components";
+import {
+  DotsHorizontalRounded,
+  Menu,
+  DotsVerticalRounded,
+} from "@styled-icons/boxicons-regular";
+
 import DeviceInfo from "@/components/DeviceInfo";
+import Image from "@/components/Image";
+
+import HomeScreen from "./images/single-sig-screen.jpeg";
+import ImportFromQr from "./images/import-from-qr.png";
+import MenuOpen from "./images/menu-open.jpeg";
+import MultisigMenu from "./images/multisig-menu.jpeg";
+import MultisigView from "./images/multisig-view.jpeg";
+import ScanToLily from "./images/scan-to-lily.jpeg";
+import Success from "./images/success.png";
+import WebcamScan from "./images/webcam-scan.png";
+import XpubQr from "./images/xpub-qr.jpeg";
 
 export const meta = {
   title: "Cobo Vault",
@@ -20,8 +38,41 @@ Cobo Vault is an airgapped hardware wallet that uses a camera and QR codes to tr
 
 #### 1) Turn on device and write down 24 word seed
 
-#### 2) Go to multisig vault
+Go through the setup process of setting up your Cobo Vault. There are [detailed instructions](https://support.cobo.com/hc/en-us/articles/360019127794-Setting-up-your-Cobo-Vault) on their website.
 
-#### 3) Click "Display XPub"
+#### 2) Open the multisig options menu and click "Show/Export XPUB"
 
-#### 4) Scan XPub QR Code to Lily Wallet
+To get to the multisig page on the Cobo Vault:
+
+1. Unlock the device
+2. Click the <MenuIcon /> icon in the top left
+3. Select "Multisig Wallet"
+4. Click the <DotsIconHorizontal /> icon in the top right
+
+<Image alt="Cobo Vault homescreen" src={MultisigMenu} />
+
+#### 3) In Lily, click the <DotsIconVertical /> icon and select "Import from QR Code"
+
+<img alt="Lily Wallet import from QR menu open" src={ImportFromQr} />
+
+#### 4) Scan the QR Code from Cobo into Lily
+
+<Image alt="Scan QR into Lily Wallet" src={ScanToLily} />
+
+#### 5) Success
+
+That's it! Once the camera scans the QR code, the camera should disappear and dispaly the Cobo Vault has imported.
+
+<img alt="Successfully imported Cobo Vault" src={Success} />
+
+export const MenuIcon = styled(Menu)`
+  width: 2em;
+`;
+
+export const DotsIconHorizontal = styled(DotsHorizontalRounded)`
+  width: 2em;
+`;
+
+export const DotsIconVertical = styled(DotsVerticalRounded)`
+  width: 1.5em;
+`;

@@ -1,4 +1,16 @@
+import styled from "styled-components";
+import { DotsVerticalRounded } from "@styled-icons/boxicons-regular";
+
+import Image from "@/components/Image";
 import DeviceInfo from "@/components/DeviceInfo";
+import InfoAlert from "@/components/InfoAlert";
+
+import VerifyBagSerialNumber from "./images/copy-backup.jpeg";
+import MicroSDCard from "./images/microsd.jpeg";
+import SaveMultisigFile from "./images/save-multisig-file.jpeg";
+import ImportFromFile from "./images/import-from-file.png";
+import FileDialog from "./images/file-dialog.png";
+import SuccessImport from "./images/success-import.png";
 
 export const meta = {
   title: "Coldcard MK3",
@@ -13,3 +25,73 @@ export const meta = {
   learnMoreUrl="https://coldcardwallet.com/"
   purchaseUrl="https://store.coinkite.com/store/coldcard"
 />
+
+## Setup Instructions
+
+#### 1. Verify bag number
+
+Coldcard does a great job of making sure your device hasn't been tampered with. Make sure that the serial number on the bag your Coldcard came in matches the serial number on the platstic inside the bag and that the bag hasn't been tampered with before beginning.
+
+<Image alt="Verify Coldcard bag serial number" src={VerifyBagSerialNumber} />
+
+#### 2. Choose PIN Code
+
+When you plug your Coldcard in initially, it will ask you to provide a PIN code. Enter first part of your PIN code, write down the two anti-phishing code words, then enter in the second part of your PIN code.
+
+#### 3. Select "New Wallet"
+
+There is also an option to restore a previously setup wallet.
+
+#### 4. Write down 24 words
+
+Write down the 24 word seed phrase displayed on the device with the paper provided. It will verify you wrote them down correctly after writing them down.
+
+## Adding Coldcard to Multisig Vault via Airgap
+
+#### 1. Insert MicroSD Card
+
+Insert a MicroSD card into the slot on the Coldcard.
+
+<Image alt="Insert MicroSD card into Coldcard" src={MicroSDCard} />
+
+#### 2. Export XPub
+
+Using the keypad, navigate to **Settings > Multisig Wallets > Export XPub**. This will save a `.json` file to the SD card.
+
+<Image alt="Insert MicroSD card into Coldcard" src={SaveMultisigFile} />
+
+#### 3. Eject MicroSD Card from Coldcard, Plug MicroSD into Computer
+
+Once the file is saved, you can eject the MicroSD card from your Coldcard and plug it into your computer. This may require an adaptor.
+
+#### 4. Click "Import From File" in <DotsIconVertical /> menu
+
+When creating a new account, click the <DotsIconVerticalSmall /> menu to reveal the Import from File option.
+
+<img alt="Insert MicroSD card into Coldcard" src={ImportFromFile} />
+
+#### 5. Select the file created by Coldcard
+
+The file will end in `.json` and start with `ccxp-` followed by some numbers.
+
+<img alt="Lily Wallet add Coldcard Airgap file dialog" src={FileDialog} />
+
+#### 6. Success
+
+Your Coldcard should be successfully imported
+
+<img alt="Successfully imported Colcard to Lily Wallet" src={SuccessImport} />
+
+<InfoAlert
+  text="Steps for setting up a multisig vault are detailed in our Get Started guide"
+  actionLink="/get-started/part-3"
+  actionText="View setup multisig guide"
+/>
+
+export const DotsIconVertical = styled(DotsVerticalRounded)`
+  width: 1.5em;
+`;
+
+export const DotsIconVerticalSmall = styled(DotsVerticalRounded)`
+  width: 1.25em;
+`;

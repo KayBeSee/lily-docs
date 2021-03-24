@@ -40,10 +40,10 @@ const Layout = ({ children }) => {
                 <MDXProvider components={components}>{children}</MDXProvider>
               </div>
             </div>
+            <Footer />
           </main>
         </div>
       </div>
-      <Footer />
     </Fragment>
   );
 };
