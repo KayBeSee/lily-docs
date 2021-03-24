@@ -13,7 +13,7 @@ export default function DocumentationPage({ meta, children, pages }) {
   return (
     <article>
       <div className="divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2">
-        <div className="prose max-w-none pt-10 pb-8">
+        <div className="prose max-w-none pt-0 sm:pt-2 pb-8">
           <MDXProvider>{children}</MDXProvider>
         </div>
         <footer className="mt-8 text-sm font-medium leading-5 xl:col-start-1 xl:row-start-2 border-t-2 border-gray-300">

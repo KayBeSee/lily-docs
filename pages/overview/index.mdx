@@ -1,24 +1,29 @@
 export const meta = {
   order: 0,
-  title: "Lily Overview"
-}
+  title: "Lily Overview",
+};
 
-<img className="h-20 w-auto mx-auto my-8" src="/assets/logo.svg" alt="Lily Logo" />
+<img
+  className="h-20 w-auto mx-auto mt-0 mb-12 sm:mb-16"
+  src="/assets/logo.svg"
+  alt="Lily Logo"
+/>
 
 # Lily Overview
+
 Lily is an open source multisignature bitcoin wallet used for securely high-value amounts of Bitcoin. Lily enables you to create addresses that require multiple keys to approve transactions to send funds. With Lily, you can store your wealth with professional-grade security and a simple user interface. By taking advantage of Lily's multisignature vaults, you can secure your wealth for yourself and your loved ones for generations.
 
 Anyone holding more than $30,000 worth of Bitcoin should consider securing their coins with a multisignature wallet like Lily.
 
-
-
 ### What can I use Lily for?
+
 - Storing your bitcoins securely using multisig
 - Moving your coins off an exchange or other hosted wallet
 - Avoiding a single point of failure for your funds
 - Sharing custody of bitcoins with multiple people
 
 ### What is multisig?
+
 Multisig, also known as multisignature, requires approval from multiple keys to authorize a bitcoin transaction. Multisig differs from a single signature wallet, which requires a single signature to approve a transaction.
 
 Multisig is native to Bitcoin and relies on the CHECK_MULTI op code built into its scripting language.
@@ -28,14 +33,16 @@ Over the past several years, different companies have manufactured hardware wall
 Lily uses multisig to provide a convenient and simple user experience to secure and send your bitcoin to others.
 
 ### What makes Lily different from other multisignature vault providers?
+
 While several other companies offer multisignature wallets and vaults, they differ from Lily in a few critical ways:
+
 - Open source
 - Local vs remote
 - Privacy
 
 The first way Lily is unique is that it is open source. This means that you can verify the code running behind the scenes does what you expect it to do, without any other data collection or unexpected behavior. Using open-source software is an essential security consideration when dealing with large amounts of immutable money.
 
-The second way Lily is unique is that it runs on your local machine versus on a website or mobile app. We made this decision for a few different reasons. 
+The second way Lily is unique is that it runs on your local machine versus on a website or mobile app. We made this decision for a few different reasons.
 
 Running a desktop application ensures that you are in total control of your funds. Even if Lily Technologies, Inc were to cease to exist, the software on your local computer would still exist and function like usual, allowing you to continue using your wallet or send funds to another location.
 
@@ -44,6 +51,7 @@ It also distributes wallet information among users. Centralized services are tar
 Finally, because Lily doesn't need to collect any information from you, we can use Bitcoin privately like cash. There is no database or information for hackers or governments to access. Satoshi made Bitcoin private, which is an ethos that we uphold when designing our products.
 
 ### The underlying technology
+
 Lily is a desktop application written in Javascript. It uses [Electron](https://www.electronjs.org/) to run locally on your desktop. Address and transaction construction relies on several open-source bitcoin libraries, including [bitcoinjs-lib](https://github.com/bitcoinjs/bitcoinjs-lib) and [unchained-bitcoin](https://github.com/unchained-capital/unchained-bitcoin).
 
 It uses the [Hardware Wallet Interface (HWI) library](https://github.com/bitcoin-core/HWI) from Bitcoin Core to communicate with the various hardware devices when setting up multisignature vaults and approving transactions.
@@ -53,5 +61,6 @@ All transaction information and broadcasting are done via [Blockstream's API](ht
 The historical bitcoin price data and current bitcoin price information comes from [Coindesk's API](https://www.coindesk.com/coindesk-api).
 
 ### Next Steps
+
 - Read about [installing Lily Wallet](/install-lily)
 - Get hands-on experience with the [Getting started with Lily](/get-started) tutorial

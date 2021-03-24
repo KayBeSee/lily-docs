@@ -6,14 +6,16 @@ const PricingTable = () => {
           <div class="px-4">
             <h2 class="text-lg leading-6 font-medium text-gray-900">Free</h2>
             <p class="mt-4">
-              <span class="text-4xl font-extrabold text-gray-900">$0</span>
+              <span class="text-4xl sm:text-3xl font-extrabold text-gray-900">
+                $0
+              </span>
               <span class="text-base font-medium text-gray-500">/year</span>
             </p>
             <a
               href="#"
               class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
             >
-              Use Free
+              Download Lily
             </a>
           </div>
 
@@ -248,7 +250,7 @@ const PricingTable = () => {
               href="#"
               class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
             >
-              Use Free
+              Download Lily
             </a>
           </div>
         </div>
@@ -257,14 +259,16 @@ const PricingTable = () => {
           <div class="px-4">
             <h2 class="text-lg leading-6 font-medium text-gray-900">Basic</h2>
             <p class="mt-4">
-              <span class="text-4xl font-extrabold text-gray-900">$100</span>
+              <span class="text-4xl sm:text-3xl font-extrabold text-gray-900">
+                $100
+              </span>
               <span class="text-base font-medium text-gray-500">/year</span>
             </p>
             <a
               href="#"
               class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
             >
-              Buy Basic
+              Purchase In-App
             </a>
           </div>
 
@@ -499,7 +503,7 @@ const PricingTable = () => {
               href="#"
               class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
             >
-              Buy Basic
+              Purchase In-App
             </a>
           </div>
         </div>
@@ -510,14 +514,16 @@ const PricingTable = () => {
               Essential
             </h2>
             <p class="mt-4">
-              <span class="text-4xl font-extrabold text-gray-900">$500</span>
+              <span class="text-4xl sm:text-3xl font-extrabold text-gray-900">
+                $500
+              </span>
               <span class="text-base font-medium text-gray-500">/year</span>
             </p>
             <a
               href="#"
               class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
             >
-              Buy Essential
+              Purchase In-App
             </a>
           </div>
 
@@ -752,7 +758,7 @@ const PricingTable = () => {
               href="#"
               class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
             >
-              Buy Essential
+              Purchase In-App
             </a>
           </div>
         </div>
@@ -761,14 +767,16 @@ const PricingTable = () => {
           <div class="px-4">
             <h2 class="text-lg leading-6 font-medium text-gray-900">Premium</h2>
             <p class="mt-4">
-              <span class="text-4xl font-extrabold text-gray-900">$1000</span>
+              <span class="text-4xl sm:text-3xl font-extrabold text-gray-900">
+                $1000
+              </span>
               <span class="text-base font-medium text-gray-500">/year</span>
             </p>
             <a
               href="#"
               class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
             >
-              Buy Premium
+              Purchase In-App
             </a>
           </div>
 
@@ -1003,7 +1011,7 @@ const PricingTable = () => {
               href="#"
               class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
             >
-              Buy Premium
+              Purchase In-App
             </a>
           </div>
         </div>
@@ -1064,7 +1072,7 @@ const PricingTable = () => {
                 <div class="h-full flex flex-col justify-between">
                   <div>
                     <p>
-                      <span class="text-4xl font-extrabold text-gray-900">
+                      <span class="text-4xl sm:text-3xl font-extrabold text-gray-900">
                         $0
                       </span>
                       <span class="text-base font-medium text-gray-500">
@@ -1074,9 +1082,10 @@ const PricingTable = () => {
                   </div>
                   <a
                     href="#"
-                    class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+                    class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
                   >
-                    Buy Free
+                    Download <br />
+                    Lily
                   </a>
                 </div>
               </td>
@@ -1085,7 +1094,7 @@ const PricingTable = () => {
                 <div class="h-full flex flex-col justify-between">
                   <div>
                     <p>
-                      <span class="text-4xl font-extrabold text-gray-900">
+                      <span class="text-4xl sm:text-3xl font-extrabold text-gray-900">
                         $100
                       </span>
                       <span class="text-base font-medium text-gray-500">
@@ -1095,9 +1104,9 @@ const PricingTable = () => {
                   </div>
                   <a
                     href="#"
-                    class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+                    class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
                   >
-                    Buy Basic
+                    Purchase In-App
                   </a>
                 </div>
               </td>
@@ -1106,7 +1115,7 @@ const PricingTable = () => {
                 <div class="h-full flex flex-col justify-between">
                   <div>
                     <p>
-                      <span class="text-4xl font-extrabold text-gray-900">
+                      <span class="text-4xl sm:text-3xl font-extrabold text-gray-900">
                         $500
                       </span>
                       <span class="text-base font-medium text-gray-500">
@@ -1116,9 +1125,9 @@ const PricingTable = () => {
                   </div>
                   <a
                     href="#"
-                    class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+                    class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
                   >
-                    Buy Essential
+                    Purchase In-App
                   </a>
                 </div>
               </td>
@@ -1127,7 +1136,7 @@ const PricingTable = () => {
                 <div class="h-full flex flex-col justify-between">
                   <div>
                     <p>
-                      <span class="text-4xl font-extrabold text-gray-900">
+                      <span class="text-4xl sm:text-3xl font-extrabold text-gray-900">
                         $1000
                       </span>
                       <span class="text-base font-medium text-gray-500">
@@ -1137,9 +1146,9 @@ const PricingTable = () => {
                   </div>
                   <a
                     href="#"
-                    class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+                    class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
                   >
-                    Buy Premium
+                    Purchase In-App
                   </a>
                 </div>
               </td>
@@ -1693,36 +1702,37 @@ const PricingTable = () => {
               <td class="pt-5 px-6">
                 <a
                   href="#"
-                  class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+                  class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
                 >
-                  Buy Free
+                  Download <br />
+                  Lily
                 </a>
               </td>
 
               <td class="pt-5 px-6">
                 <a
                   href="#"
-                  class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+                  class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
                 >
-                  Buy Basic
+                  Purchase In-App
                 </a>
               </td>
 
               <td class="pt-5 px-6">
                 <a
                   href="#"
-                  class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+                  class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
                 >
-                  Buy Essential
+                  Purchase In-App
                 </a>
               </td>
 
               <td class="pt-5 px-6">
                 <a
                   href="#"
-                  class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
+                  class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
                 >
-                  Buy Premium
+                  Purchase In-App
                 </a>
               </td>
             </tr>
