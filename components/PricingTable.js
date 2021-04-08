@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 const PricingTable = () => {
   return (
-    <div class="max-w-2xl mx-auto bg-white mt-8 rounded-lg py-4 sm:py-8 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="max-w-2xl mx-auto bg-white mt-8 rounded-lg py-4 sm:py-8 sm:px-0 lg:max-w-7xl lg:px-0">
       <div class="space-y-24 lg:hidden">
         <div>
           <div class="px-4">
@@ -11,12 +13,11 @@ const PricingTable = () => {
               </span>
               <span class="text-base font-medium text-gray-500">/year</span>
             </p>
-            <a
-              href="#"
-              class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-            >
-              Download Lily
-            </a>
+            <Link href="/installation">
+              <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                Download Lily
+              </a>
+            </Link>
           </div>
 
           <table class="mt-8 w-full">
@@ -246,12 +247,11 @@ const PricingTable = () => {
           </table>
 
           <div class="border-t border-gray-200 px-4 pt-5">
-            <a
-              href="#"
-              class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-            >
-              Download Lily
-            </a>
+            <Link href="/installation">
+              <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                Download Lily
+              </a>
+            </Link>
           </div>
         </div>
 
@@ -264,12 +264,11 @@ const PricingTable = () => {
               </span>
               <span class="text-base font-medium text-gray-500">/year</span>
             </p>
-            <a
-              href="#"
-              class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-            >
-              Purchase In-App
-            </a>
+            <Link href="/installation">
+              <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                Purchase In-App
+              </a>
+            </Link>
           </div>
 
           <table class="mt-8 w-full">
@@ -499,12 +498,11 @@ const PricingTable = () => {
           </table>
 
           <div class="border-t border-gray-200 px-4 pt-5">
-            <a
-              href="#"
-              class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-            >
-              Purchase In-App
-            </a>
+            <Link href="/installation">
+              <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                Purchase In-App
+              </a>
+            </Link>
           </div>
         </div>
 
@@ -519,12 +517,11 @@ const PricingTable = () => {
               </span>
               <span class="text-base font-medium text-gray-500">/year</span>
             </p>
-            <a
-              href="#"
-              class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-            >
-              Purchase In-App
-            </a>
+            <Link href="/installation">
+              <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                Purchase In-App
+              </a>
+            </Link>
           </div>
 
           <table class="mt-8 w-full">
@@ -754,12 +751,11 @@ const PricingTable = () => {
           </table>
 
           <div class="border-t border-gray-200 px-4 pt-5">
-            <a
-              href="#"
-              class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-            >
-              Purchase In-App
-            </a>
+            <Link href="/installation">
+              <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                Purchase In-App
+              </a>
+            </Link>
           </div>
         </div>
 
@@ -772,12 +768,11 @@ const PricingTable = () => {
               </span>
               <span class="text-base font-medium text-gray-500">/year</span>
             </p>
-            <a
-              href="#"
-              class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-            >
-              Purchase In-App
-            </a>
+            <Link href="/installation">
+              <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                Purchase In-App
+              </a>
+            </Link>
           </div>
 
           <table class="mt-8 w-full">
@@ -1007,12 +1002,11 @@ const PricingTable = () => {
           </table>
 
           <div class="border-t border-gray-200 px-4 pt-5">
-            <a
-              href="#"
-              class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600"
-            >
-              Purchase In-App
-            </a>
+            <Link href="/installation">
+              <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-sm font-semibold text-white text-center hover:to-pink-600">
+                Purchase In-App
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -1080,13 +1074,11 @@ const PricingTable = () => {
                       </span>
                     </p>
                   </div>
-                  <a
-                    href="#"
-                    class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
-                  >
-                    Download <br />
-                    Lily
-                  </a>
+                  <Link href="/installation">
+                    <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600">
+                      Download Lily
+                    </a>
+                  </Link>
                 </div>
               </td>
 
@@ -1102,12 +1094,11 @@ const PricingTable = () => {
                       </span>
                     </p>
                   </div>
-                  <a
-                    href="#"
-                    class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
-                  >
-                    Purchase In-App
-                  </a>
+                  <Link href="/installation">
+                    <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600">
+                      Purchase In-App
+                    </a>
+                  </Link>
                 </div>
               </td>
 
@@ -1123,12 +1114,11 @@ const PricingTable = () => {
                       </span>
                     </p>
                   </div>
-                  <a
-                    href="#"
-                    class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
-                  >
-                    Purchase In-App
-                  </a>
+                  <Link href="/installation">
+                    <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600">
+                      Purchase In-App
+                    </a>
+                  </Link>
                 </div>
               </td>
 
@@ -1144,12 +1134,11 @@ const PricingTable = () => {
                       </span>
                     </p>
                   </div>
-                  <a
-                    href="#"
-                    class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
-                  >
-                    Purchase In-App
-                  </a>
+                  <Link href="/installation">
+                    <a class="mt-6 block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600">
+                      Purchase In-App
+                    </a>
+                  </Link>
                 </div>
               </td>
             </tr>
@@ -1700,40 +1689,35 @@ const PricingTable = () => {
               </th>
 
               <td class="pt-5 px-6">
-                <a
-                  href="#"
-                  class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
-                >
-                  Download <br />
-                  Lily
-                </a>
+                <Link href="/installation">
+                  <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600">
+                    Download Lily
+                  </a>
+                </Link>
               </td>
 
               <td class="pt-5 px-6">
-                <a
-                  href="#"
-                  class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
-                >
-                  Purchase In-App
-                </a>
+                <Link href="/installation">
+                  <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600">
+                    Purchase In-App
+                  </a>
+                </Link>
               </td>
 
               <td class="pt-5 px-6">
-                <a
-                  href="#"
-                  class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
-                >
-                  Purchase In-App
-                </a>
+                <Link href="/installation">
+                  <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600">
+                    Purchase In-App
+                  </a>
+                </Link>
               </td>
 
               <td class="pt-5 px-6">
-                <a
-                  href="#"
-                  class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600"
-                >
-                  Purchase In-App
-                </a>
+                <Link href="/installation">
+                  <a class="block w-full bg-green-500 border border-transparent rounded-md shadow py-2 text-xs font-semibold text-white text-center hover:to-pink-600">
+                    Purchase In-App
+                  </a>
+                </Link>
               </td>
             </tr>
           </tfoot>

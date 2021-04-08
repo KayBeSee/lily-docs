@@ -49,54 +49,42 @@ export default function IndexPage() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <Card
-          image={
-            <RocketIcon className="bg-green-100 rounded-full text-green-900" />
-          }
+          image={<RocketIcon />}
           link="/overview"
           title="Get Started"
           content="Learn Lily basics and the benefits of multisig."
         />
 
         <Card
-          image={
-            <DesktopDownloadIcon className="bg-green-100 rounded-full text-green-900" />
-          }
+          image={<DesktopDownloadIcon />}
           link="/installation"
           title="Download and install"
           content="Download and install Lily on your machine in a few easy steps."
         />
 
         <Card
-          image={
-            <BookIcon className="bg-green-100 rounded-full text-green-900" />
-          }
+          image={<BookIcon />}
           link="/guides"
           title="Guides"
           content="Learn how to setup Lily and start securing your bitcoin."
         />
 
         <Card
-          image={
-            <DeviceIcon className="bg-green-100 rounded-full text-green-900" />
-          }
+          image={<DeviceIcon />}
           link="/devices"
           title="Supported Devices"
           content="See what devices are compatabile and recommended."
         />
 
         <Card
-          image={
-            <GiftIcon className="bg-green-100 rounded-full text-green-900" />
-          }
+          image={<GiftIcon />}
           link="/get-started"
           title="What's new?"
           content="Learn about cool new features, updates, and bug fixes."
         />
 
         <Card
-          image={
-            <CodeReviewIcon className="bg-green-100 rounded-full text-green-900" />
-          }
+          image={<CodeReviewIcon />}
           link="/get-started"
           title="Developers"
           content="Learn about how Lily works and how to integrate it with your hardware"
@@ -108,36 +96,42 @@ export default function IndexPage() {
 
 const RocketIcon = styled(Rocket)`
   width: 4em;
+  height: 4em;
   padding: 1em;
   border-radius: 1.25em;
 `;
 
 const BookIcon = styled(Book)`
   width: 4em;
+  height: 4em;
   padding: 1em;
   border-radius: 1.25em;
 `;
 
 const DesktopDownloadIcon = styled(DesktopDownload)`
   width: 4em;
+  height: 4em;
   padding: 1em;
   border-radius: 1.25em;
 `;
 
 const GiftIcon = styled(Gift)`
   width: 4em;
+  height: 4em;
   padding: 1em;
   border-radius: 1.25em;
 `;
 
 const CodeReviewIcon = styled(CodeReview)`
   width: 4em;
+  height: 4em;
   padding: 1em;
   border-radius: 1.25em;
 `;
 
 const DeviceIcon = styled(Calculator)`
   width: 4em;
+  height: 4em;
   padding: 1em;
   border-radius: 1.25em;
 `;
