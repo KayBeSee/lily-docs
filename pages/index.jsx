@@ -31,15 +31,15 @@ export default function IndexPage() {
   return (
     <Fragment>
       <img
-        className="h-20 w-auto mx-auto mt-4"
+        className="h-20 w-auto mx-auto mt-2 md:mt-4"
         src="/assets/logo.svg"
         alt="Lily Logo"
       />
-      <div className="w-3/4 md:w-1/2 mt-5 mb-4 flex justify-center mx-auto">
+      <div className="w-3/4 md:w-1/2 mt-2 mb-2 md:mt-5 md:mb-4 flex justify-center mx-auto">
         <h2 className="text-center">What can we help you find?</h2>
       </div>
 
-      <div className="w-full sm:w-3/4 md:w-1/2 flex justify-center mx-auto mb-20">
+      <div className="w-full sm:w-3/4 md:w-1/2 flex justify-center mx-auto mb-12 lg:mb-20">
         <input
           id="algolia-search"
           placeholder="Search for guides, terms, device names, and more..."
