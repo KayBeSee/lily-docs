@@ -45,12 +45,17 @@ export default function IndexPage() {
           placeholder="Search for guides, terms, device names, and more..."
           className="p-3 border w-full rounded-md shadow-inner"
         />
+
+        {/* <Search
+          apiKey="69974bfe8281c96f980a8e10f66d0566"
+          indexName="lilywallet"
+        /> */}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <Card
           image={<RocketIcon />}
-          link="/overview"
+          link="/get-started/part-1"
           title="Get Started"
           content="Learn Lily basics and the benefits of multisig."
         />
@@ -64,7 +69,7 @@ export default function IndexPage() {
 
         <Card
           image={<BookIcon />}
-          link="/guides"
+          link="/overview"
           title="Guides"
           content="Learn how to setup Lily and start securing your bitcoin."
         />
@@ -78,14 +83,14 @@ export default function IndexPage() {
 
         <Card
           image={<GiftIcon />}
-          link="/get-started"
+          link="https://github.com/Lily-Technologies/lily-wallet/releases"
           title="What's new?"
           content="Learn about cool new features, updates, and bug fixes."
         />
 
         <Card
           image={<CodeReviewIcon />}
-          link="/get-started"
+          link="https://github.com/Lily-Technologies/lily-wallet"
           title="Developers"
           content="Learn about how Lily works and how to integrate it with your hardware"
         />
