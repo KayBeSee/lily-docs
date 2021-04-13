@@ -19,7 +19,7 @@ const Footer = () => {
                 </h3>
                 <ul className="mt-4 space-y-4 list-none">
                   <li>
-                    <Link href="https://lily.kevinmulcrone.com">
+                    <Link href="https://lily-wallet.com">
                       <a className="text-base text-white hover:text-green-200 no-underline">
                         Lily Wallet
                       </a>
@@ -27,7 +27,7 @@ const Footer = () => {
                   </li>
 
                   <li>
-                    <Link href="https://lily.kevinmulcrone.com/btc-security-guide">
+                    <Link href="https://lily-wallet.com/btc-security-guide">
                       <a className="text-base text-white hover:text-green-200 no-underline">
                         BTC Security Guide
                       </a>
@@ -41,7 +41,7 @@ const Footer = () => {
                 </h3>
                 <ul className="mt-4 space-y-4 list-none">
                   <li>
-                    <Link href="https://docs.lily.kevinmulcrone.com">
+                    <Link href="https://docs.lily-wallet.com">
                       <a className="text-base text-white hover:text-green-200 no-underline">
                         Documentation
                       </a>
@@ -49,7 +49,7 @@ const Footer = () => {
                   </li>
 
                   <li>
-                    <Link href="https://lily.kevinmulcrone.com/pricing">
+                    <Link href="https://lily-wallet.com/pricing">
                       <a className="text-base text-white hover:text-green-200 no-underline">
                         Pricing
                       </a>
@@ -65,7 +65,7 @@ const Footer = () => {
                 </h3>
                 <ul className="mt-4 space-y-4 list-none">
                   <li>
-                    <Link href="https://lily.kevinmulcrone.com/about">
+                    <Link href="https://lily-wallet.com/about">
                       <a className="text-base text-white hover:text-green-200 no-underline">
                         About
                       </a>
@@ -80,7 +80,7 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="https://lily.kevinmulcrone.com/support">
+                    <Link href="https://lily-wallet.com/support">
                       <a className="text-base text-white hover:text-green-200 no-underline">
                         Contact
                       </a>
@@ -94,7 +94,7 @@ const Footer = () => {
                 </h3>
                 <ul className="mt-4 space-y-4 list-none">
                   <li>
-                    <Link href="https://lily.kevinmulcrone.com/privacy">
+                    <Link href="https://lily-wallet.com/privacy">
                       <a className="text-base text-white hover:text-green-200 no-underline">
                         Privacy
                       </a>
@@ -102,7 +102,7 @@ const Footer = () => {
                   </li>
 
                   <li>
-                    <Link href="https://lily.kevinmulcrone.com/terms">
+                    <Link href="https://lily-wallet.com/terms">
                       <a className="text-base text-white hover:text-green-200 no-underline">
                         Terms
                       </a>
