@@ -14,3 +14,19 @@ Most tiers are differentiated by the number of devices used to secure your coins
 The license itself is a string signed by a private key controlled by Lily Technologies, Inc. and is valid for 52,560 blocks (approximately one year). As always, purchasing a license doesn't require any KYC/AML information.
 
 <PricingTable />
+
+## How it works
+
+Lily leverages the bitcoin blockchain to check license validity.
+
+When requesting a license, Lily Wallet will request a payment address and payment amount from a server hosted by Lily Technologies, Inc. The wallet then constructs a transaction with the UTXO data in the wallet and sends an unsigned transaction back to the server.
+
+The server will check to make sure the transaction is paying the correct address and amount, then extracts the txid. With the txid extracted, it will create a message with the `tier:blockheight:txid` and then sign it with a private key.
+
+On startup, Lily Wallet will verify that the txid in the license is confirmed, that the current blockheight is less than the expiration blockheight in the license, and that the signature on the license corresponds to the public key hardcoded into the software.
+
+This enables Lily Technologies, Inc to recieve funds to keep developing and maintaining Lily Wallet without needing personal information from our customers.
+
+A diagram of the flow is below:
+
+<img alt="Lily Wallet license flow" src="/assets/lily-license-flow.png" />
