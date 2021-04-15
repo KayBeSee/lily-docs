@@ -1,0 +1,59 @@
+import InfoAlert from "@/components/InfoAlert";
+
+import UmbrelConnectWalletPage from "./images/umbrel-connect-wallet-page.png";
+import NetworkSettingsDropdown from "./images/network-settings-dropdown.png";
+import NetworkSettingsPage from "./images/network-settings-page.png";
+import LilyConnectionModal from "./images/lily-connection-modal.png";
+import Success from "./images/success.png";
+import ScanningForTransactions from "./images/scanning-for-transactions.png";
+
+export const meta = {
+  order: 13,
+  title: "Umbrel",
+};
+
+# Umbrel Setup
+
+Umbrel is a software suite that can be purchased to easily run your own bitcoin node. You can connect your Lily Wallet to your Umbrel over Tor. Detailed instructions on how to do that are listed below.
+
+<InfoAlert
+  text="Connecting to Umbrel requires running Tor on your machine"
+  actionLink="/connect-to-node/connect-to-tor"
+  actionText="View Tor Setup Instructions"
+/>
+
+#### 1) Get your Umbrel RPC password
+
+To get your Umbrel RPC password, visit [http://umbrel.local/connect/lily-wallet](http://umbrel.local/connect/lily-wallet) while connected to the same network as your Umbrel. Make a note of this password, as it will be used in Step 4.
+
+<img alt="Lily connection modal image" src={UmbrelConnectWalletPage} />
+
+#### 2) Navigate to the Network Settings in Lily Wallet
+
+Click on the green circle in the top-right corner of Lily Wallet and then select "Network Settings."
+
+<img alt="Lily connection modal image" src={NetworkSettingsDropdown} />
+
+#### 3) Click "Connect to Custom Node" from the Data Source menu
+
+Select "Connect to Custom Node" from the dropdown menu. This will bring up a modal to input connection details.
+
+<img alt="Lily connection modal image" src={NetworkSettingsPage} />
+
+#### 4) Fill out your Umbrel connection information
+
+Use the information from Step 1 and fill it out in the modal.
+
+<img alt="Lily connection modal image" src={LilyConnectionModal} />
+
+#### 5) Verify connection is working.
+
+The Data Source should now be your Umbrel connection information and the status should be "Connected"
+
+<img alt="Lily connection modal image" src={Success} />
+
+#### 6) Get data
+
+When you log into your Lily account, your wallet information will be loaded into the Umbrel and it will start scanning for transactions. This may take a while depending on how many transactions you have.
+
+<img alt="Lily connection modal image" src={ScanningForTransactions} />
