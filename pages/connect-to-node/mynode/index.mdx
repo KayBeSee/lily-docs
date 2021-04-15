@@ -1,4 +1,9 @@
-import screen1 from "./mynode-setup-screen.png";
+import MyNodeBitcoinPage from "./images/mynode-bitcoin-page.png";
+import NetworkSettingsDropdown from "./images/network-settings-dropdown.png";
+import NetworkSettingsPage from "./images/network-settings-page.png";
+import LilyConnectionModal from "./images/lily-connection-modal.png";
+import Success from "./images/success.png";
+import ScanningForTransactions from "./images/scanning-for-transactions.png";
 
 export const meta = {
   order: 13,
@@ -7,6 +12,50 @@ export const meta = {
 
 # MyNode Setup
 
-Note: make sure the host begins with http:// and ends with :port
+MyNode is a hardware device and software suite that can be purchased to easily run your own bitcoin node without any assembly required. You can connect your Lily Wallet to your MyNode while on the same local network or remotely over Tor. Detailed instructions on how to do that are listed below.
 
-<img alt="Setup MyNode with Lily Wallet" src={screen1} />
+## Connecting to MyNode on local network
+
+#### 1) Get your MyNode RPC password
+
+To get your MyNode RPC password, visit [http://mynode.local/bitcoind](http://mynode.local/bitcoind) while connected to the same network as your MyNode. Then click "show" under the RPC Password item in the heading. Make a note of this password, as it will be used in Step 4.
+
+<img alt="Lily connection modal image" src={MyNodeBitcoinPage} />
+
+#### 2) Navigate to the Network Settings in Lily Wallet
+
+Click on the green circle in the top-right corner of Lily Wallet and then select "Network Settings."
+
+<img alt="Lily connection modal image" src={NetworkSettingsDropdown} />
+
+#### 3) Click "Connect to Custom Node" from the Data Source menu
+
+Select "Connect to Custom Node" from the dropdown menu. This will bring up a modal to input connection details.
+
+<img alt="Lily connection modal image" src={NetworkSettingsPage} />
+
+#### 4) Fill out your MyNode connection information
+
+Use the information from Step 1 and fill it out in the modal.
+
+Default settings are:
+
+```
+Host: http://mynode.local:8332
+Username: mynode
+Password: see Step #1
+```
+
+<img alt="Lily connection modal image" src={LilyConnectionModal} />
+
+#### 5) Verify connection is working.
+
+The Data Source should now be your MyNode connection information and the status should be "Connected"
+
+<img alt="Lily connection modal image" src={Success} />
+
+#### 6) Get data
+
+When you log into your Lily account, your wallet information will be loaded into the MyNode and it will start scanning for transactions. This may take a while depending on how many transactions you have.
+
+<img alt="Lily connection modal image" src={ScanningForTransactions} />
