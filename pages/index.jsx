@@ -10,7 +10,7 @@ import {
 } from "@styled-icons/octicons";
 import { Calculator } from "@styled-icons/boxicons-regular";
 
-import Card from "../components/Card";
+import Card from "@/components/Card";
 
 export const meta = {
   title: "Welcome!",

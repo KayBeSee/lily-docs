@@ -1,34 +1,50 @@
+import DeviceCard from "@/components/DeviceCard";
+
 export const meta = {
   title: "Supported Devices",
   order: 5,
 };
 
-# Devices
+# Supported Devices
+By using different hardware wallets from different manufacterers, Lily Wallet users remove another potential single point of failure in their digital wealth security setup.
 
-Lily uses Bitcoin Core's [Hardware Wallet Interface (HWI) library](https://github.com/bitcoin-core/HWI) to communicate with hardware wallets.
+Lily Wallet is compatable with some of the most popular hardware wallets in the bitcoin ecosystem.  To view detailed instructions for setting up a device or troubleshooting, select the device below.
 
-We currently support the following devices:
 
-- Coldcard MK3
-- Cobo Vault
-- Trezor One
-- Trezor Model T
-- Ledger Nano X
-- Ledger Nano S
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+  <DeviceCard
+    image="/assets/devices/cobo.png"
+    link="/devices/cobo-vault"
+    title="Cobo Vault"
+  />
 
-### Recommended Devices
+  <DeviceCard
+    image="/assets/devices/coldcard.png"
+    link="/devices/coldcard"
+    title="Coldcard"
+  />
 
-We recommend using devices from different manufacturers in multisig setups in case there is a bug in one manufactuer's software implementation.
+  <DeviceCard
+    image="/assets/devices/ledger.png"
+    link="/devices/ledger-nano-s"
+    title="Ledger Nano S"
+  />
 
-#### For 2-of-3 setups, we recommend:
+  <DeviceCard
+    image="/assets/devices/ledger-nano-x.png"
+    link="/devices/ledger-nano-x"
+    title="Ledger Nano X"
+  />
 
-- Coldcard MK3
-- Cobo Vault
-- Trezor One
+  <DeviceCard
+    image="/assets/devices/trezor.png"
+    link="/devices/trezor-one"
+    title="Trezor One"
+  />
 
-#### For 3-of-5 setups, we recommend:
-
-- (2) Coldcard MK3
-- Cobo Vault
-- Trezor One
-- Ledger Nano S
+  <DeviceCard
+    image="/assets/devices/trezor-model-t.png"
+    link="/devices/trezor-model-t"
+    title="Trezor Model T"
+  />
+</div>
