@@ -1,3 +1,5 @@
+import CopyCommand from '@/components/CopyCommand'
+
 import screen1 from "./tor-setup-screen.png";
 
 export const meta = {
@@ -7,24 +9,44 @@ export const meta = {
 
 # Connect to Tor
 
+Connections to certain nodes require running Tor on your machine in order to connect. This will connect your machine to the Tor network which provides greater privacy.
+
 Unfortunately tor doesn't work out of the box with Lily, so there are a few steps that must be run.
 
-## on Mac
+## Mac Instructions
 
-We will need to install Homebrew (https://brew.sh/) to make it easy to run Tor.
+We will need to install [Homebrew](https://brew.sh/) to make it easy to run Tor.
 
-### Paste the following into a Terminal window:
+###### Paste the following into a Terminal window:
 
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+<CopyCommand command={`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`} />
 
-### Once that completes, run:
+##### Once that completes, run:
 
-`brew install tor`
+<CopyCommand command={`brew install tor`} />
 
-### Then run:
+##### Then run:
 
-`tor`
+<CopyCommand command={`tor`} />
 
 The output should look like:
 
 <img alt="Setup Tor with Lily Wallet" src={screen1} />
+
+## Windows Instructions
+
+Install Tor from the Tor Project's website [here](https://www.torproject.org/download/tor/).
+
+Unzip the file, open the "Tor" folder inside it and install "tor.exe"
+
+Then run Tor after it is done installing.
+
+
+## Linux Instructions
+Run the following apt-get command to install Tor on your machine.
+
+<CopyCommand command={`sudo apt-get install tor`} />
+
+##### Then run:
+
+<CopyCommand command={`tor`} />
