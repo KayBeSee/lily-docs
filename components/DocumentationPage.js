@@ -4,11 +4,14 @@ import Link from "next/link";
 
 export default function DocumentationPage({ meta, children, pages }) {
   const router = useRouter();
-  const pageIndex = pages
+  const filteredPages = pages
+    .filter((item) => !item.meta.skip)
+    .sort((a, b) => a.meta.order - b.meta.order);
+  const pageIndex = filteredPages
     .sort((a, b) => a.meta.order - b.meta.order)
     .findIndex((page) => page.link === router.pathname);
-  const previous = pages[pageIndex - 1];
-  const next = pages[pageIndex + 1];
+  const previous = filteredPages[pageIndex - 1];
+  const next = filteredPages[pageIndex + 1];
 
   return (
     <article>
