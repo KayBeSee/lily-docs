@@ -58,42 +58,42 @@ export default function IndexPage() {
             <div className="bg-green-100 rounded-2xl text-green-900 p-1 flex align-center justify-center mr-6 w-min"><RocketIcon /></div>}
           link="/get-started/part-1"
           title="Get Started"
-          content={<p className="text-sm lg:text-lg m-0 leading-4 lg:leading-6">"Learn Lily basics and the benefits of multisig."</p>}
+          content={<p className="text-sm lg:text-lg m-0 leading-4 lg:leading-6">Learn Lily basics and the benefits of multisig.</p>}
         />
 
         <Card
           image={<div className="bg-green-100 rounded-2xl text-green-900 p-1 flex align-center justify-center mr-6 w-min"><DesktopDownloadIcon /></div>}
           link="/installation"
           title="Download and install"
-          content={<p className="text-sm lg:text-lg m-0 leading-4 lg:leading-6">"Download and install Lily on your machine in a few easy steps."</p>}
+          content={<p className="text-sm lg:text-lg m-0 leading-4 lg:leading-6">Download and install Lily on your machine in a few easy steps.</p>}
         />
 
         <Card
           image={<div className="bg-green-100 rounded-2xl text-green-900 p-1 flex align-center justify-center mr-6 w-min"><BookIcon /></div>}
           link="/overview"
           title="Guides"
-          content={<p className="text-sm lg:text-lg m-0 leading-4 lg:leading-6">"Learn how to setup Lily and start securing your bitcoin."</p>}
+          content={<p className="text-sm lg:text-lg m-0 leading-4 lg:leading-6">Learn how to setup Lily and start securing your bitcoin.</p>}
         />
 
         <Card
           image={<div className="bg-green-100 rounded-2xl text-green-900 p-1 flex align-center justify-center mr-6 w-min"><DeviceIcon /></div>}
           link="/devices"
           title="Supported Devices"
-          content={<p className="text-sm lg:text-lg m-0 leading-4 lg:leading-6">"See what devices are compatabile and recommended."</p>}
+          content={<p className="text-sm lg:text-lg m-0 leading-4 lg:leading-6">See what devices are compatabile and recommended.</p>}
         />
 
         <Card
           image={<div className="bg-green-100 rounded-2xl text-green-900 p-1 flex align-center justify-center mr-6 w-min"><GiftIcon /></div>}
           link="https://github.com/Lily-Technologies/lily-wallet/releases"
           title="What's new?"
-          content={<p className="text-sm lg:text-lg m-0 leading-4 lg:leading-6">"Learn about cool new features, updates, and bug fixes."</p>}
+          content={<p className="text-sm lg:text-lg m-0 leading-4 lg:leading-6">Learn about cool new features, updates, and bug fixes.</p>}
         />
 
         <Card
           image={<div className="bg-green-100 rounded-2xl text-green-900 p-1 flex align-center justify-center mr-6 w-min"><CodeReviewIcon /></div>}
           link="https://github.com/Lily-Technologies/lily-wallet"
           title="Developers"
-          content={<p className="text-sm lg:text-lg m-0 leading-4 lg:leading-6">"Learn about how Lily works and how to integrate it with your hardware"</p>}
+          content={<p className="text-sm lg:text-lg m-0 leading-4 lg:leading-6">Learn about how Lily works and how to integrate it with your hardware</p>}
         />
       </div>
     </Fragment>
